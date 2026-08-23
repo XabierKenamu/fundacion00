@@ -252,6 +252,44 @@ header{
   padding:.28rem .55rem;margin-bottom:.9rem;
 }
 
+/* ---------- el círculo ---------- */
+.loop{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:2.4rem;background:var(--line);border:1.5px solid var(--ink)}
+@media (max-width:900px){.loop{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.loop{grid-template-columns:1fr}}
+.step{background:var(--paper);padding:clamp(1.2rem,2.4vw,1.6rem);display:flex;flex-direction:column;gap:.6rem}
+.step .n{
+  font-family:"DM Mono",monospace;font-size:.68rem;letter-spacing:.12em;color:var(--blue);
+}
+.step h3{margin:0;font-size:1rem}
+.step p{font-size:.9rem;color:var(--ink-2);margin:0}
+.loop-back{
+  display:flex;align-items:center;gap:.9rem;margin-top:1rem;
+  font-family:"DM Mono",monospace;font-size:.68rem;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--blue);
+}
+.loop-back i{flex:1;height:1.5px;background:var(--blue);position:relative}
+.loop-back i::before{
+  content:"";position:absolute;left:0;top:-3.5px;
+  border:4px solid transparent;border-right-color:var(--blue);
+}
+.counts{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:2.6rem;background:var(--line);border:1.5px solid var(--ink)}
+@media (max-width:640px){.counts{grid-template-columns:1fr}}
+.count{background:var(--paper);padding:clamp(1.1rem,2.2vw,1.5rem)}
+.count .big{
+  font-family:"Archivo",Arial,sans-serif;font-variation-settings:"wdth" 118;font-weight:800;
+  font-size:clamp(2rem,1.5rem + 1.6vw,2.8rem);line-height:.9;letter-spacing:-.025em;
+  font-variant-numeric:tabular-nums;
+}
+.count .lbl{
+  font-family:"DM Mono",monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);margin-top:.6rem;line-height:1.5;
+}
+.punch{
+  margin-top:2.6rem;border-left:3px solid var(--blue);padding-left:1.3rem;
+  font-family:"Archivo",Arial,sans-serif;font-variation-settings:"wdth" 100;font-weight:600;
+  font-size:clamp(1.15rem,1rem + 1vw,1.6rem);line-height:1.28;letter-spacing:-.018em;max-width:36ch;
+}
+
 /* ---------- social run: código propio ---------- */
 .run{
   --r-bg:#232628;--r-fg:#F4F2EF;--r-hi:#FF5B2E;
@@ -405,7 +443,7 @@ footer{border-top:1.5px solid var(--hair);padding-block:clamp(2.5rem,5vw,4rem)}
       <div>
         <p class="mono">Fundación 00 · Bilbao</p>
         <h1 class="display">Pídete<br>un <span class="blue">00</span></h1>
-        <p class="lead">30 días sin alcohol, con una hora a la semana con alguien que ya salió de una adicción. Tú recuperas el control de cuándo bebes. Esa persona consolida su recuperación acompañándote.</p>
+        <p class="lead">30 días sin alcohol, con una hora a la semana con alguien que ya salió de una adicción. Tú recuperas el control de cuándo bebes. Esa persona consolida su recuperación acompañándote. Sin ti, no tiene a quién acompañar.</p>
         <div class="btns">
           <a class="btn" href="#apuntarme">Quiero una plaza</a>
           <a class="btn ghost" href="#reto">Cómo funciona</a>
@@ -538,9 +576,61 @@ footer{border-top:1.5px solid var(--hair);padding-block:clamp(2.5rem,5vw,4rem)}
           <span class="tag">La que más nos gusta</span>
           <h3>Traes a alguien y le acompañas</h3>
           <p>Le propones el reto a una persona y estás a su lado ese mes. No conduces las sesiones —eso es cosa de los coaches—, solo eres quien le escribe un viernes por la noche y quien le cuenta que la segunda semana es la peor. Acabas de pasar por ahí: nadie está mejor situado.</p>
-          <p style="margin-top:.8rem"><strong>Y te llevas la camiseta.</strong></p>
+          <p style="margin-top:.8rem"><strong>Y te llevas la camiseta.</strong> Es también lo que hace que esto siga existiendo: <a href="#circulo" style="color:var(--blue)">mira el círculo</a>.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- EL CÍRCULO -->
+  <section class="rv" id="circulo" style="padding-top:0">
+    <div class="wrap">
+      <div style="max-width:62ch">
+        <p class="mono">Cómo crece esto</p>
+        <h2 class="display" style="margin-top:.8rem">El círculo</h2>
+        <p class="lead" style="margin-top:1.2rem">Ocupar una plaza no es solo dejar de beber un mes. Es poner en marcha una cadena que ya está montada y que necesita gente para girar.</p>
+      </div>
+
+      <div class="loop">
+        <div class="step">
+          <span class="n">01</span>
+          <h3>Entras al reto</h3>
+          <p>Ocupas una de las ocho plazas y se te asigna un coach.</p>
+        </div>
+        <div class="step">
+          <span class="n">02</span>
+          <h3>Tu coach tiene a alguien</h3>
+          <p>Sin ti no hay a quién acompañar. Acompañándote consolida lo que a él le costó años aprender, y eso es lo que sostiene su recuperación.</p>
+        </div>
+        <div class="step">
+          <span class="n">03</span>
+          <h3>Terminas y traes a alguien</h3>
+          <p>Si te ha servido, se lo propones a una persona. Casi nadie llega aquí por internet: llega porque alguien se lo contó.</p>
+        </div>
+        <div class="step">
+          <span class="n">04</span>
+          <h3>Hace falta otro coach</h3>
+          <p>Más gente en el reto significa más plazas de coach, y cada plaza es una persona saliendo de una adicción que encuentra un papel al terminar su tratamiento.</p>
+        </div>
+      </div>
+      <p class="loop-back"><i></i>Y vuelta a empezar</p>
+
+      <div class="counts">
+        <div class="count">
+          <p class="big">8</p>
+          <p class="lbl">Plazas en la edición<br>del 5 de octubre</p>
+        </div>
+        <div class="count">
+          <p class="big">3</p>
+          <p class="lbl">Coaches acompañando<br>en esta primera edición</p>
+        </div>
+        <div class="count">
+          <p class="big">0</p>
+          <p class="lbl">Ediciones hechas. Todavía<br>no hemos ayudado a nadie</p>
+        </div>
+      </div>
+
+      <p class="punch">En una fundación de diez mil socios, tu aportación es invisible. Aquí eres una de ocho personas.</p>
     </div>
   </section>
 
@@ -591,6 +681,7 @@ footer{border-top:1.5px solid var(--hair);padding-block:clamp(2.5rem,5vw,4rem)}
         <p class="mono">Apuntarme</p>
         <h2 class="display" style="margin-top:.8rem">Pide tu plaza</h2>
         <p class="lead" style="margin-top:1.2rem">Son 8 plazas porque es lo que podemos acompañar bien, no por hacernos los interesantes. Déjanos tus datos y te llamamos para conocernos antes de confirmar nada.</p>
+        <p style="margin-top:1rem;color:var(--ink-2)">Y si dudas, piénsalo al revés: hay tres personas que han salido de una adicción esperando a tener a alguien a quien acompañar. Ocupar una plaza es lo que pone eso en marcha.</p>
       </div>
 
       <form action="https://formsubmit.co/xabierdelgado1@gmail.com" method="POST" class="rv">
