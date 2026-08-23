@@ -720,24 +720,43 @@ footer{border-top:1.5px solid var(--hair);padding-block:clamp(2.5rem,5vw,4rem)}
   }
 
   var pending = Array.prototype.slice.call(document.querySelectorAll(".rv"));
+
+  function show(el){
+    el.classList.add("in");
+    pending = pending.filter(function(x){ return x !== el; });
+  }
   function sweep(){
     var vh = window.innerHeight || document.documentElement.clientHeight || 800;
-    pending = pending.filter(function(el){
-      if (el.getBoundingClientRect().top < vh * 0.9) { el.classList.add("in"); return false; }
-      return true;
+    pending.slice().forEach(function(el){
+      if (el.getBoundingClientRect().top < vh * 0.9) show(el);
     });
     if (rings && !ringsFired && rings.getBoundingClientRect().top < vh * 0.85) {
       ringsFired = true;
       rings.classList.add("rings-in");
     }
     if (grid && !gridFired && grid.getBoundingClientRect().top < vh * 0.75) fillDays();
-    if (!pending.length && gridFired && ringsFired) {
-      window.removeEventListener("scroll", sweep);
-      window.removeEventListener("resize", sweep);
-    }
+  }
+
+  // Tres vías, porque una sola no basta: el observador cubre el scroll normal,
+  // el barrido cubre los saltos grandes, y el temporizador garantiza que nada
+  // se quede invisible si alguna de las dos falla.
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { show(e.target); io.unobserve(e.target); }
+      });
+      sweep();
+    }, { rootMargin: "0px 0px -8% 0px" });
+    pending.forEach(function(el){ io.observe(el); });
   }
   window.addEventListener("scroll", sweep, { passive: true });
   window.addEventListener("resize", sweep);
+  window.addEventListener("load", sweep);
+  setTimeout(function(){
+    pending.slice().forEach(show);
+    if (rings) { ringsFired = true; rings.classList.add("rings-in"); }
+    fillDays();
+  }, 2500);
   sweep();
 })();
 </script>
