@@ -207,9 +207,9 @@ header{
 }
 .rings{width:min(15rem,70%);height:auto;margin-top:2rem;overflow:visible}
 .ring{fill:none;stroke:currentColor;stroke-width:1.8}
-.ring-a{animation:joinL 1.4s cubic-bezier(.19,1,.22,1) .25s both}
-.ring-b{animation:joinR 1.4s cubic-bezier(.19,1,.22,1) .25s both}
-.lens{fill:currentColor;animation:lensIn 1s ease 1.1s both}
+.ring-a{animation:joinL 1.7s cubic-bezier(.19,1,.22,1)}
+.ring-b{animation:joinR 1.7s cubic-bezier(.19,1,.22,1)}
+.lens{fill:currentColor;animation:lensIn 2.2s ease}
 
 /* ---------- pregunta ---------- */
 .ask{border-block:1.5px solid var(--hair);background:var(--paper-2)}
@@ -360,11 +360,11 @@ footer{border-top:1.5px solid var(--hair);padding-block:clamp(2.5rem,5vw,4rem)}
 /* Animaciones de entrada, nunca de ocultacion: si algo fallara,
    el contenido ya esta visible en su sitio. */
 @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-@keyframes joinL{from{transform:translateX(-14px)}to{transform:translateX(0)}}
-@keyframes joinR{from{transform:translateX(14px)}to{transform:translateX(0)}}
-@keyframes lensIn{from{opacity:0}to{opacity:1}}
+@keyframes joinL{0%,15%{transform:translateX(-14px)}100%{transform:translateX(0)}}
+@keyframes joinR{0%,15%{transform:translateX(14px)}100%{transform:translateX(0)}}
+@keyframes lensIn{0%,55%{opacity:0}100%{opacity:1}}
 @keyframes fillDay{from{background:transparent;border-color:var(--line)}to{background:var(--blue);border-color:var(--blue)}}
-.rv{animation:rise .7s cubic-bezier(.19,1,.22,1) both}
+.rv{animation:rise .7s cubic-bezier(.19,1,.22,1)}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *{animation:none!important;transition-duration:.01ms!important}
