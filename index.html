@@ -44,7 +44,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400..700&family=Instrument+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Big+Shoulders+Display:wght@700;800;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Instrument+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap">
 
 <style>
 /* ===========================================================
@@ -99,14 +99,16 @@ img,svg{max-width:100%}
 a{color:inherit}
 
 .display{
-  font-family:"Familjen Grotesk","Helvetica Neue",Arial,sans-serif;
-  font-weight:700;letter-spacing:-.042em;line-height:.95;text-wrap:balance;margin:0;
+  font-family:"Archivo","Helvetica Neue",Arial,sans-serif;
+  font-variation-settings:"wdth" 118;
+  font-weight:800;letter-spacing:-.02em;line-height:.92;
+  text-transform:uppercase;text-wrap:balance;margin:0;
 }
-h1.display{font-size:clamp(3rem,1.8rem + 6vw,6.4rem)}
-h2.display{font-size:clamp(1.9rem,1.4rem + 2.4vw,3.2rem)}
+h1.display{font-size:clamp(2.5rem,1.5rem + 5vw,5.4rem)}
+h2.display{font-size:clamp(1.7rem,1.3rem + 2.2vw,2.9rem)}
 h3{
-  font-family:"Familjen Grotesk",Arial,sans-serif;font-weight:700;font-size:1.12rem;
-  line-height:1.2;letter-spacing:-.025em;margin:0 0 .5rem;
+  font-family:"Archivo",Arial,sans-serif;font-variation-settings:"wdth" 105;
+  font-weight:700;font-size:1.08rem;line-height:1.2;letter-spacing:-.012em;margin:0 0 .5rem;
 }
 .mono{
   font-family:"DM Mono","SFMono-Regular",Menlo,monospace;font-weight:400;
@@ -136,8 +138,8 @@ header{
 .bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.7rem}
 .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
 .brand-name{
-  font-family:"Familjen Grotesk",Arial,sans-serif;font-weight:700;
-  font-size:.95rem;letter-spacing:-.03em;
+  font-family:"Archivo",Arial,sans-serif;font-variation-settings:"wdth" 112;
+  font-weight:800;font-size:.82rem;letter-spacing:.02em;text-transform:uppercase;
 }
 .nav{display:flex;align-items:center;gap:1.4rem}
 .nav a{
@@ -150,8 +152,9 @@ header{
 /* ---------- botones ---------- */
 .btn{
   display:inline-flex;align-items:center;gap:.5rem;
-  font-family:"Familjen Grotesk",Arial,sans-serif;font-weight:700;font-size:.95rem;
-  letter-spacing:-.02em;padding:.85rem 1.5rem;border-radius:2px;text-decoration:none;cursor:pointer;
+  font-family:"Archivo",Arial,sans-serif;font-variation-settings:"wdth" 108;
+  font-weight:700;font-size:.84rem;letter-spacing:.04em;text-transform:uppercase;
+  padding:.85rem 1.5rem;border-radius:2px;text-decoration:none;cursor:pointer;
   border:1.5px solid var(--blue);background:var(--blue);color:var(--blue-ink);
   transition:background .16s ease,color .16s ease,border-color .16s ease;
 }
@@ -214,8 +217,9 @@ header{
 /* ---------- pregunta ---------- */
 .ask{border-block:1.5px solid var(--hair);background:var(--paper-2)}
 .ask .big{
-  font-family:"Familjen Grotesk",Arial,sans-serif;font-weight:700;letter-spacing:-.03em;
-  font-size:clamp(1.3rem,1rem + 1.4vw,1.95rem);line-height:1.22;
+  font-family:"Archivo",Arial,sans-serif;font-variation-settings:"wdth" 100;
+  font-weight:600;letter-spacing:-.018em;
+  font-size:clamp(1.2rem,1rem + 1.2vw,1.75rem);line-height:1.25;
 }
 .ask .big + .big{margin-top:.5rem;color:var(--blue)}
 
@@ -258,9 +262,9 @@ header{
   background:var(--r-bg);color:var(--r-fg);
 }
 .run h2{
-  font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:800;
-  letter-spacing:.005em;line-height:.9;text-transform:uppercase;
-  font-size:clamp(2.6rem,1.8rem + 4vw,5rem);color:var(--r-fg);margin:0;
+  font-family:"Archivo",Arial,sans-serif;font-variation-settings:"wdth" 64;
+  font-weight:900;letter-spacing:.008em;line-height:.9;text-transform:uppercase;
+  font-size:clamp(2.8rem,2rem + 4.6vw,5.6rem);color:var(--r-fg);margin:0;
 }
 .run .mono{color:color-mix(in srgb,var(--r-fg) 60%,transparent)}
 .run p{color:color-mix(in srgb,var(--r-fg) 82%,transparent)}
@@ -282,8 +286,8 @@ header{
   display:inline-flex;flex-direction:column;align-items:center;
   background:var(--r-fg);color:var(--r-bg);border-radius:4px;padding:.7rem 1.4rem .5rem;
 }
-.bib .n{font-family:"Big Shoulders Display",Impact,sans-serif;font-weight:900;font-size:4rem;line-height:.82}
-.bib .c{font-family:"Instrument Sans",Arial,sans-serif;font-weight:700;font-size:.55rem;letter-spacing:.26em;text-transform:uppercase;margin-top:.25rem}
+.bib .n{font-family:"Archivo",Arial,sans-serif;font-variation-settings:"wdth" 64;font-weight:900;font-size:4.2rem;line-height:.82}
+.bib .c{font-family:"Archivo",Arial,sans-serif;font-variation-settings:"wdth" 100;font-weight:700;font-size:.55rem;letter-spacing:.26em;text-transform:uppercase;margin-top:.25rem}
 
 /* ---------- precio ---------- */
 .price-box{
@@ -293,7 +297,8 @@ header{
 @media (max-width:760px){.price-box{grid-template-columns:1fr}}
 .price-num{
   background:var(--blue);color:var(--blue-ink);padding:clamp(1.6rem,3vw,2.4rem);
-  font-family:"Familjen Grotesk",Arial,sans-serif;font-weight:700;letter-spacing:-.05em;
+  font-family:"Archivo",Arial,sans-serif;font-variation-settings:"wdth" 118;
+  font-weight:800;letter-spacing:-.025em;
   font-size:clamp(3rem,2rem + 3vw,4.6rem);line-height:.85;display:flex;flex-direction:column;justify-content:center;
 }
 .price-num small{
@@ -334,8 +339,8 @@ form{margin-top:2.2rem;display:grid;gap:1.1rem;max-width:44rem}
 details{border-bottom:1px solid var(--line)}
 summary{
   cursor:pointer;list-style:none;padding:1.15rem 2.2rem 1.15rem 0;position:relative;
-  font-family:"Familjen Grotesk",Arial,sans-serif;font-weight:700;font-size:1.02rem;
-  letter-spacing:-.02em;line-height:1.3;
+  font-family:"Archivo",Arial,sans-serif;font-variation-settings:"wdth" 104;
+  font-weight:700;font-size:1rem;letter-spacing:-.01em;line-height:1.3;
 }
 summary::-webkit-details-marker{display:none}
 summary::after{
@@ -378,7 +383,10 @@ footer{border-top:1.5px solid var(--hair);padding-block:clamp(2.5rem,5vw,4rem)}
       <svg width="30" height="30" viewBox="0 0 200 200" aria-hidden="true">
         <circle cx="100" cy="100" r="94" fill="#1B34D8"/>
         <circle cx="100" cy="100" r="80" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-dasharray="14 14"/>
-        <text x="100" y="130" text-anchor="middle" fill="#FFFFFF" style="font-family:'Familjen Grotesk',Arial,sans-serif;font-weight:700;font-size:82px;letter-spacing:-4px">00</text>
+        <g fill="none" stroke="#FFFFFF" stroke-width="18">
+          <ellipse cx="70" cy="100" rx="21" ry="32"/>
+          <ellipse cx="130" cy="100" rx="21" ry="32"/>
+        </g>
       </svg>
       <span class="brand-name">Fundación 00</span>
     </a>
@@ -662,7 +670,10 @@ footer{border-top:1.5px solid var(--hair);padding-block:clamp(2.5rem,5vw,4rem)}
           <svg width="30" height="30" viewBox="0 0 200 200" aria-hidden="true">
             <circle cx="100" cy="100" r="94" fill="#1B34D8"/>
             <circle cx="100" cy="100" r="80" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-dasharray="14 14"/>
-            <text x="100" y="130" text-anchor="middle" fill="#FFFFFF" style="font-family:'Familjen Grotesk',Arial,sans-serif;font-weight:700;font-size:82px;letter-spacing:-4px">00</text>
+            <g fill="none" stroke="#FFFFFF" stroke-width="18">
+              <ellipse cx="70" cy="100" rx="21" ry="32"/>
+              <ellipse cx="130" cy="100" rx="21" ry="32"/>
+            </g>
           </svg>
           <span class="brand-name">Fundación 00</span>
         </a>
