@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gracias · Fundación 00</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=Newsreader:opsz,wght@6..72,300..600&display=swap">
+<style>
+:root{
+  --ink:#0F1F1A; --ink-2:#42564D; --ink-3:#75877E;
+  --paper:#F0F3EF; --line:#CBD5C9; --amber:#A8620C; --amber-ink:#FFF6EA;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#E5EBE4; --ink-2:#A3B3A9; --ink-3:#75887C;
+    --paper:#0B1310; --line:#25352D; --amber:#E7A64B; --amber-ink:#14100A;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E5EBE4; --ink-2:#A3B3A9; --ink-3:#75887C;
+  --paper:#0B1310; --line:#25352D; --amber:#E7A64B; --amber-ink:#14100A;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Newsreader",Georgia,serif;font-size:1.1rem;line-height:1.6;
+  min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem;
+  -webkit-font-smoothing:antialiased;
+}
+.box{width:min(46rem,100%);text-align:left}
+h1{
+  font-family:"Archivo",Arial,sans-serif;font-variation-settings:"wdth" 112;font-weight:700;
+  text-transform:uppercase;font-size:clamp(2.2rem,1.4rem + 3.4vw,3.6rem);line-height:1;
+  letter-spacing:-.02em;margin:1.4rem 0 0;
+}
+.label{
+  font-family:"Archivo",Arial,sans-serif;font-weight:600;font-size:.72rem;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3);margin:0;
+}
+p{margin:1.2rem 0 0;color:var(--ink-2)}
+p.big{font-size:1.15em;color:var(--ink)}
+.btn{
+  display:inline-flex;align-items:center;font-family:"Archivo",Arial,sans-serif;
+  font-weight:650;font-size:.86rem;padding:.78rem 1.3rem;border-radius:999px;
+  text-decoration:none;border:1px solid var(--ink);background:var(--ink);color:var(--paper);
+  margin-top:2.2rem;transition:background .18s ease,color .18s ease,transform .18s ease;
+}
+.btn:hover{background:var(--amber);border-color:var(--amber);color:var(--amber-ink);transform:translateY(-2px)}
+.rings{display:block;width:120px;height:auto}
+.small{font-size:.88rem;color:var(--ink-3);margin-top:2.4rem;border-top:1px solid var(--line);padding-top:1.2rem}
+</style>
+</head>
+<body>
+  <div class="box">
+    <svg class="rings" viewBox="0 0 200 100" aria-hidden="true">
+      <defs><clipPath id="c"><circle cx="118" cy="50" r="40"/></clipPath></defs>
+      <circle cx="82" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="118" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="82" cy="50" r="40" fill="var(--amber)" clip-path="url(#c)"/>
+    </svg>
+    <p class="label" style="margin-top:1.8rem">Fundación 00</p>
+    <h1>Ya está.<br>Te llamamos.</h1>
+    <p class="big">Hemos recibido tu solicitud. En los próximos días te llamamos para conocernos y contarte cómo va a ser el mes. Es una conversación tranquila, no un examen.</p>
+    <p>Si después de hablar los dos lo vemos, tienes plaza para el 5 de octubre. Y si vemos que este no es tu sitio, te lo diremos con franqueza y te orientaremos hacia donde sí.</p>
+    <a class="btn" href="/">Volver</a>
+    <p class="small">Mientras tanto, el social run del sábado está abierto a cualquiera y no hace falta apuntarse a nada. Escríbenos a xabierdelgado1@gmail.com y te decimos dónde quedamos.</p>
+  </div>
+</body>
+</html>
