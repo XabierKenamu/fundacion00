@@ -170,6 +170,13 @@ header{
 .hero{padding-top:clamp(2.4rem,5vw,4rem);padding-bottom:clamp(3rem,6vw,5rem)}
 .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(2rem,5vw,4rem);align-items:end}
 @media (max-width:920px){.hero-grid{grid-template-columns:1fr;gap:2.6rem;align-items:start}}
+.claim{
+  font-family:"Archivo",Arial,sans-serif;font-variation-settings:"wdth" 100;
+  font-weight:700;font-size:clamp(.8rem,.75rem + .25vw,.96rem);
+  letter-spacing:.14em;text-transform:uppercase;color:var(--blue);
+  margin:0;display:flex;align-items:center;gap:.7rem;text-wrap:balance;
+}
+.claim svg{flex:none}
 .hero h1{margin:1rem 0 0}
 .hero h1 .blue{color:var(--blue)}
 .hero .lead{margin-top:1.5rem;max-width:44ch}
@@ -441,7 +448,15 @@ footer{border-top:1.5px solid var(--hair);padding-block:clamp(2.5rem,5vw,4rem)}
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="mono">Fundación 00 · Bilbao</p>
+        <p class="claim">
+          <svg width="30" height="17" viewBox="0 0 60 34" aria-hidden="true">
+            <defs><clipPath id="clm"><circle cx="38" cy="17" r="13"/></clipPath></defs>
+            <circle cx="22" cy="17" r="13" fill="none" stroke="currentColor" stroke-width="3"/>
+            <circle cx="38" cy="17" r="13" fill="none" stroke="currentColor" stroke-width="3"/>
+            <circle cx="22" cy="17" r="13" fill="currentColor" clip-path="url(#clm)"/>
+          </svg>
+          Ayuda a otros ayudándote a ti mismo
+        </p>
         <h1 class="display">Pídete<br>un <span class="blue">00</span></h1>
         <p class="lead">30 días sin alcohol, con una hora a la semana con alguien que ya salió de una adicción. Tú recuperas el control de cuándo bebes. Esa persona consolida su recuperación acompañándote. Sin ti, no tiene a quién acompañar.</p>
         <div class="btns">
@@ -452,6 +467,7 @@ footer{border-top:1.5px solid var(--hair);padding-block:clamp(2.5rem,5vw,4rem)}
 
       <div class="spec">
         <p class="spec-hd">Reto 30 días · Ed. 01</p>
+        <div class="spec-row"><span class="k">Dónde</span><span class="v">Bilbao</span></div>
         <div class="spec-row"><span class="k">Empieza</span><span class="v hi">05.10.2026</span></div>
         <div class="spec-row"><span class="k">Duración</span><span class="v">30 días</span></div>
         <div class="spec-row"><span class="k">Plazas</span><span class="v">8</span></div>
@@ -797,7 +813,7 @@ footer{border-top:1.5px solid var(--hair);padding-block:clamp(2.5rem,5vw,4rem)}
           </svg>
           <span class="brand-name">Fundación 00</span>
         </a>
-        <p style="font-size:.95rem;color:var(--ink-2);max-width:40ch">Ayuda a otro mientras te ayudas a ti mismo. Bilbao.</p>
+        <p style="font-size:.95rem;color:var(--ink-2);max-width:40ch">Ayuda a otros ayudándote a ti mismo. Bilbao.</p>
       </div>
       <div>
         <p class="mono" style="margin-bottom:.7rem">Contacto</p>
